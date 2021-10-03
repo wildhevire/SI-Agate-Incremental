@@ -24,6 +24,7 @@ public class AchievementController : MonoBehaviour
     [SerializeField] private Text _popUpText;
     [SerializeField] private float _popUpShowDuration = 3f;
     [SerializeField] private List<AchievementData> _achievementList;
+
     private float _popUpShowDurationCounter;
 
     private void Update()
@@ -52,8 +53,6 @@ public class AchievementController : MonoBehaviour
         }
     }
 
-
-
     private void ShowAchivementPopUp(AchievementData achievement)
     {
         _popUpText.text = achievement.Title;
@@ -62,11 +61,8 @@ public class AchievementController : MonoBehaviour
     }
 }
 
-
-
 // System.Serializable digunakan agar object dari script bisa di-serialize
 // dan bisa di-inputkan dari Inspector, jika tidak terdapat ini, maka variable tidak akan muncul di inspector
-
 [System.Serializable]
 public class AchievementData
 {
